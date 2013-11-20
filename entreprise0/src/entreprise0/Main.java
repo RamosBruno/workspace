@@ -24,7 +24,7 @@ public class Main {
 		
 		if (Reponse.equalsIgnoreCase("AJ"))
 		{
-			while (Reponse.equalsIgnoreCase("AJ"))
+			do
 			{	
 				System.out.println("Quel nom ?");
 				Nom = saisie.nextLine();
@@ -36,7 +36,7 @@ public class Main {
 				societe.addEmployes(ajout);
 				System.out.println("Que voulez-vous faire maintenant ? (AJ: pour ajouter,AF : pour afficher,S pour Supprimer )");
 				Reponse = saisie.nextLine();
-			}
+			}while(Reponse.equalsIgnoreCase("AJ"));
 		}
 		
 		else if (Reponse.equalsIgnoreCase("S"))
@@ -44,7 +44,7 @@ public class Main {
 			System.out.println("C'est S !!!");
 		}
 		
-		else
+		else if (Reponse.equalsIgnoreCase("AF"))
 		{
 			System.out.println("C'est AF !!!");
 		}
