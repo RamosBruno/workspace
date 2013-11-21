@@ -6,7 +6,6 @@ import java.util.ListIterator;
 public class Entreprise 
 {
 	private String nom;
-	private int rangEmp=0;
 	private ArrayList<Employes> personnel;
 	
 	public Entreprise()
@@ -40,14 +39,12 @@ public class Entreprise
 	public void addEmployes(Employes personnelAjouter)
 	{
 		this.personnel.add(personnelAjouter);
-		rangEmp++;
-		
 	}
 	
-	public void removeEmployes (int nb)
+	public void removeEmployes (String Nom, String Prenom, String Poste)
 	{
-		
-		personnel.remove(nb);
+		ListIterator it = personnel.listIterator();
+		while(this.personnel.remove(Nom,Prenom,Poste));
 	}
 	
 	public String toString()
@@ -55,7 +52,7 @@ public class Entreprise
 		String liste;
 		liste = "";
 		liste += this.getNom();
-		liste += "\n" + personnel.toString()+" "+rangEmp;
+		liste += "\n" + personnel.toString();
 		return liste;
 	}
 

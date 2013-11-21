@@ -11,13 +11,11 @@ public class Employes {
 		nom="";
 		prenom="";
 		poste="";
-		
 	}
 	
 	public Employes(String pNom, String pPrenom, String pPoste)
 	{
 		this.setEmployes(pNom,pPrenom,pPoste);
-		nbEmp++;
 	}
 	
 	public void setEmployes(String pNom, String pPrenom, String pPoste)
@@ -25,11 +23,12 @@ public class Employes {
 		this.nom=pNom;
 		this.prenom=pPrenom;
 		this.poste=pPoste;
+		this.nbEmp++;
 	}
 	
 	public String getEmployes()
 	{
-		return this.nom+" "+this.prenom+" "+this.poste+" "+nbEmp+" ";
+		return this.nom+" "+this.prenom+" "+this.poste+" ";
 	}
 	
 	public String toString()
