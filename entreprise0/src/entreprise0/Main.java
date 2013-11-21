@@ -39,17 +39,24 @@ public class Main {
 			}while(Reponse.equalsIgnoreCase("AJ"));
 		}
 		
-		else if (Reponse.equalsIgnoreCase("S"))
+		if (Reponse.equalsIgnoreCase("S"))
 		{
-			System.out.println("C'est S !!!");
+			System.out.println("Quel nom ?");
+			Nom = saisie.nextLine();
+			System.out.println("Quel prénom ?");
+			Prenom = saisie.nextLine();
+			System.out.println("Quel poste ?");
+			Poste = saisie.nextLine();
+			societe.removeEmployes(Nom,Prenom,Poste);
 		}
 		
-		else if (Reponse.equalsIgnoreCase("AF"))
+		if (Reponse.equalsIgnoreCase("AF"))
 		{
-			System.out.println("C'est AF !!!");
+			System.out.println(societe);
 		}
-
 		System.out.println(societe);
+
+		
 		
 		
 

@@ -40,9 +40,9 @@ public class Entreprise
 		this.personnel.add(personnelAjouter);
 	}
 	
-	public void removeEmployes (Employes personnelSupprimer)
+	public void removeEmployes (String Nom, String Prenom, String Poste)
 	{
-		while(this.personnel.remove(personnelSupprimer));
+		while(this.personnel.remove(Nom,Prenom,Poste));
 	}
 	
 	public String toString()
