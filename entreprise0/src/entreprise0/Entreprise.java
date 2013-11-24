@@ -1,12 +1,11 @@
 package entreprise0;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
+
 
 public class Entreprise 
 {
 	private String nom;
-	private int rangEmp=0;
 	private ArrayList<Employes> personnel;
 	
 	public Entreprise()
@@ -39,9 +38,7 @@ public class Entreprise
 	
 	public void addEmployes(Employes personnelAjouter)
 	{
-		this.personnel.add(personnelAjouter);
-		rangEmp++;
-		
+		this.personnel.add(personnelAjouter);		
 	}
 	
 	public void removeEmployes (int nb)
@@ -55,7 +52,7 @@ public class Entreprise
 		String liste;
 		liste = "";
 		liste += this.getNom();
-		liste += "\n" + personnel.toString()+" "+rangEmp;
+		liste += "\n" + personnel.toString();
 		return liste;
 	}
 

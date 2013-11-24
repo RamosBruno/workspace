@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		Entreprise societe;
 		String entreprise,Reponse,Nom,Prenom,Poste;
-		int nb;
+		int nb=0;
 		Scanner saisie = new Scanner(System.in);
 		
 		
@@ -33,30 +33,33 @@ public class Main {
 				Prenom = saisie.nextLine();
 				System.out.println("Quel poste ?");
 				Poste = saisie.nextLine();
-				Employes ajout = new Employes(Nom,Prenom,Poste);
+				nb++;
+				Employes ajout = new Employes(Nom,Prenom,Poste,nb);
 				societe.addEmployes(ajout);
 				System.out.println("Que voulez-vous faire maintenant ? (AJ: pour ajouter,AF : pour afficher,S pour Supprimer )");
 				Reponse = saisie.nextLine();
-			}while(Reponse.equalsIgnoreCase("AJ"));
+			}
+			while(Reponse.equalsIgnoreCase("AJ"));
 		}
 		
 		if (Reponse.equalsIgnoreCase("S"))
 		{
-			System.out.println(societe);
-			System.out.println("Quel employé a supprimer ?");
-			nb = saisie.nextInt();
-			societe.removeEmployes(nb);
+			do
+			{
+				System.out.println(societe);
+				System.out.println("Quel employé a supprimer ?");
+				nb = saisie.nextInt();
+				societe.removeEmployes(nb);
+				System.out.println("Que voulez-vous faire maintenant ? (AJ: pour ajouter,AF : pour afficher,S pour Supprimer )");
+				Reponse = saisie.nextLine();
+			}
+			while(Reponse.equalsIgnoreCase("S"));
 		}
 		
 		if (Reponse.equalsIgnoreCase("AF"))
 		{
 			System.out.println(societe);
 		}
-		System.out.println(societe);
-
-		
-		
-		
 
 	}
 
