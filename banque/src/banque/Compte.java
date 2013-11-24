@@ -22,7 +22,7 @@ public class Compte
 	
 	public void affiche()
 	{
-		System.out.println(nom+"-"+numCompte+"-"+soldeCompte);
+			System.out.println(nom+"- "+numCompte+"- "+soldeCompte);
 	}
 	
 	public void depot(int pDepot)
@@ -33,5 +33,14 @@ public class Compte
 	public void retrait (int pRetrait)
 	{
 		soldeCompte = soldeCompte - pRetrait;
+		if (soldeCompte < -300)
+		{
+			soldeCompte = soldeCompte + pRetrait;
+			System.out.println("Retrait impossible, car le solde après retrait est inférieur à 300");
+		}
+		else 
+		{
+				soldeCompte= soldeCompte;
+		}
 	}
 }
