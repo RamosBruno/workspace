@@ -7,6 +7,7 @@ public class Main {
 	@SuppressWarnings("resource")
 	public static void main(String[] args)
 	{
+		//déclaration des variables
 		Scanner saisie = new Scanner(System.in);
 		int somme;
 		
